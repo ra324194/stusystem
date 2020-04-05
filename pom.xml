@@ -14,6 +14,7 @@
         <module>stusystem-order</module>
         <module>stusystem-mall</module>
         <module>stusystem-query</module>
+        <module>stusystem-server</module>
     </modules>
 
 
