@@ -91,6 +91,7 @@ public class ShiroConfig {
         Map<String,Filter> filters = new HashMap<>(3);
         SecurityFilter securityFilter = new SecurityFilter();
         securityFilter.setConfig(config);
+        securityFilter.setClients("client1");
         filters.put("securityFilter",securityFilter);
         CallbackFilter callbackFilter = new CallbackFilter();
         callbackFilter.setConfig(config);

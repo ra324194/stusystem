@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)https://cas.shmtu.edu.cn/cas/login?service=https%3A%2F%2Fjwxt.shmtu.edu.cn%2Fshmtu%2Fhome%21index.action -->
+<html xmlns:th="http://www.thymeleaf.org" class=" js no-mobile desktop no-ie chrome chrome65 cas-section w-1249 gt-240 gt-320 gt-480 gt-640 gt-768 gt-800 gt-1024 lt-1280 lt-1440 lt-1680 lt-1920 no-portrait landscape gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch retina fontface domloaded" id="login-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>上海海事大学单点登录系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="../static/css/all.min.css" th:href="@{~/css/all.min.css}"><link rel="stylesheet" href="../static/css/cas.css" th:href="@{~/css/cas.css}"><link rel="icon" href="https://cas.shmtu.edu.cn/cas/favicon.ico" type="image/x-icon"><script type="text/javascript" src="../static/js/jquery.min.js" th:src="@{~/js/jquery.min.js}"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></head>
+
+<body class="login">
+<header role="banner">
+    <nav class="navbar navbar-expand-md fixed-top">
+    </nav>
+</header>
+
+<main role="main" class="container mt-3 mb-3">
+    <div id="content" class="row">
+        <div class="col-md-7"></div>
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2><img src="../static/img/smulogo.svg" th:src="@{~/img/smulogo.svg}" id="logo"> 统一身份认证</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post" id="fm1" action="localhost:9100/login" th:action="@{loginning}" >
+                        <!--<input type = hidden name="redirectUrl">-->
+                        <h3>用户登录</h3>
+
+                        <!--<section class="form-group">-->
+                        <!--</section>-->
+
+                        <!--<section class="form-group">-->
+                            <label for="username">用户名:</label>
+
+                            <div>
+                                <input class="form-control required" id="username" size="25" tabindex="1" type="text" accesskey="n" placeholder="输入学工号" autocomplete="off" name="username" value=""></div>
+                        <!--</section>-->
+
+                        <!--<section class="form-group">-->
+                            <label for="password">密　码:</label>
+
+                            <!--<div>-->
+                                <input class="form-control required" type="password" id="password" size="25" tabindex="2" accesskey="p" autocomplete="off" placeholder="输入密码" name="password" value=""><span id="capslock-on" style="display:none;">
+                                <!--<p>-->
+                                    <!--<i class="fa fa-exclamation-circle"></i>-->
+                                    <!--<span>CAPSLOCK key is turned on!</span>-->
+                                <!--</p>-->
+                            </span>
+                            </div>
+                        </section>
+
+                        <!--<section class="form-group">-->
+                            <!--<label for="validateCode">验证码</label>-->
+                            <!--<div class="input-group">-->
+                                <!--<input class="form-control required" type="text" id="validateCode" name="validateCode" autocomplete="off" placeholder="请输入2位数字验证码" tabindex="3"><div class="input-group-addon">-->
+                                <!--<img id="captchaImg" src="./上海海事大学单点登录系统_files/captcha" style="width:60px;height:30px;cursor:pointer" alt="单击刷新验证码"></div>-->
+                            <!--</div>-->
+                        <!--</section>-->
+                        <input class="btn btn-block btn-submit" name="submit" accesskey="l" tabindex="6" type="submit" value="登录"></form>
+                        <!--&lt;!&ndash;<input type="hidden" name="execution" value="91fd8a07-4bd7-44e6-ba59-a6143895e30e_ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LlIzSzlFaHI0WUxFbHlWSktSbEduUXVHNVUybHdYbHB2TG5vb081djBkRm5MNXRJVWtocHA3cGFOL3B1ZDY4WlBvbGNobUN4d2ZuU0I5cnE5cExwRHNDNmNsT1p3UXZhaU9BbDcvSGJkODl5RExQZEc3UnQ1R2V4bkp2U3NtVzBaaEk1MXdiQ0NOYmJrSEtURjZiZCtaWUxMWVA4clhIb1BZeDNCMkZXelJ3TittbGFJTEt6aitSK2xKOG9zUnlxMkh6UWZrWXFQcndqUjR5cENYK0JOdEc5OTE3VlowelhRM0gxc1VJb0lwVm0zdmMvMHNGUUhTemJJY3FXZkdRNEMvSVFLWldMb1JSMHUrOUc4UTE1MVdwVHdta3NPanZIbGRYZ3NWN0Uvb2YxOVpmbC80VWxxbFo0TDVjc1AxenRjWE9UbXowVnhycUQ2WEhUd1dwMGFBd29iTHF4Q1Z0ZG5ZUFd3QTJZMHpHdWJHL3gzTTN5dkF5Q3FkRmtmMklaM09PYmZuTDNsL3ZXQTJKOC84S2tieUlXamUyQzVPZmFTU0JpUkFQYkNHUFJxZnl6bmtOSXFJWlZCeUZGOGM4cWRnVVRPc0V6TmFSLzhRVHo0UUxueGVFQ21XaUxsekJKc1U3T1hyYWZ1MU1tbkd4ZmgzY3Faa2EvTzAyUnVsSWswQ0JBSWJoMHhiYmpmSnpxVUQwaGdnQko4SDRWdDVxQzNsbjluWGZSdDRTRnN1eWY4UUdDLzIyY3VpS1lwKyt5NTNlQ2ZRa21mZHRsQmtUM0dLR2ZWbDV6d0JZY05jc084QkQ4ZW16OVY5VFZCbE11bG0vNXN4OFI5bUFBVE4wL1VQaHFVbW5QaDhvdmdGSC9JVmliNmZnOGxXWFF2Nkp1UWJxT1daNGRGd0VPYzhMbkxDSGtrSzUyc1NxbXdYNnRPemhJbC9WV084bC96SWo4cldGNVd2dUR1YUJvNmt6OWJNTWZiYUhRUlZXQzF4RTNIQkdzeHZxUWxLaWlBNVFpbC9SS2V6ck1XcytpLzBPSXJmdmNDSFA3akZOd0s4bERCMFZqNEhMNlQxWmRMbDF6OGV6K0JEQTJtRm5oeHp3UEhaRk1OOWh0Vzl3TjZ5VFRDOTRESUl0UHJoa1RNVkwzeS9ZeVNTak1YZlRBdEdqVjlLMmhMUXRBK0s1QytIMksycVFINUJtckM3K29HMkJiSkY3K2tsSXc0Q05CTHBicFhiZ1hjSmFGOGdXVkYxN3h4TENDTERHWHEvNEtrOWdpekZWRnF0RW9qUzY1aGVKdHZndEUrTzllaHZ3Q21INXdmRUw2VTl2Yy9JS2RVekVreHVZNStEU0xMaWl3c202K01YYVdaWVlyU0piLzZ2YjlhSERCYjlKNkZnRnpGVGk3VUE4ZklRdU4ra3ZNdm1XWUtHL28vWW8xOHl3NWE4bVhXWmhIYzBLdnNFKzQ0SzZMTkFZbHRsMjhMdzJIRXY0YWxtSS80bnZ3R211bVA2Z1YyRnJQajcyWXJyRUpUUnJqTkV4WjJIN3NHRU1sRUVqOTRnSXhUQ2hRbU5WU21ySDltV1N4b25KR0lnNHkyQmtXYTdFcHJnSEMvZHZCVitjUFYwWEtWNmp0bFY4UDJZUHc4RUdUUXdHK1V0K1VUUmRidlpDaml5bWhoOFZjbmJld0tOaHdXWGpQUVNmQ3htUG5scElxY1RjRG1peWR4ZlJxeklVRk14Wmx4VHRnM3dJTzZxWENYZHdyNjR0Q0VYa01vWEgyc251KzllVkdGdVVqeXhuSmJTTHp2dnpOSXlkcjR6QVJ4Qm1XU3VncDRldEpHN0JBa3pRdjIwU3FWbFhNcUpmc2VQTzBWU1FhdzFndDZNNjZRV2g2SE80b21vazNkSTUzc2RjbjlvM2gxQzhyV0J6QTFqeEFCRzdsV2hpMUVvTGpPNjZ1RE5BUTVEV3B2WnQxdHc4RXJBUW5Pbmp0UVRtaEVOY1NmUlJpdVVic3J1RkZhdlg5Z3dZU05rVzZia3h2UlBUTXMwY1VrSWRSTUtzRVdTK2Z6TjYycU4wS3VPTjBxd3VHZVZxTXRZYy9XellwWmFMbU1mZU1pV2p1VWNBN0FKVnI2K1FCVVdWN3B6bjdXaVRkTC9Id01jei9Xb1pzenI2cGZ6bVNiL01FSm4wTm40aFR6ejM3MmFtYTVrS05jM25ZNndyVi9CbVZLRWhSSUx1SkpMNmpLaUtxWHFhSEl2R1VoREMxZjZzYmdTZll3UlEvK1l3bzhWQUxWeWZESlFTUkFZOFVBZmRjTHRVOUVWOG9RZUVzY3gxV2s2M1NMcUZtRmo3WDVENDBEVCtDUXhGdFdUdlh2Q01vMmdmbzZkSm5wNWRIWWZkQ29lanJXdW1BNnhXRUtsV2MrSjF5YmwrbC9vZ2RWMGovVU1pS2E4L0RwVW0wMkhNQWlwdDNPdkZnelBOb1QxUlVjSUt1TXZnc1JlNVBhVzdQTDFmZXViQWwzb3ZzNTFaRVppelhHRk5zYnJ6eEpxb2pIKzBWMlF6dnNRSVRXekNscWdiTnRabHBnd2FaYmRGV01OcHdUcGovOC9hV0N2eGNaOTNhZi8yRitYQnZ4L284eUxMWHo3bWxiWldocG9JNEZKcXBmZU41THh5Smk3bTlGQmpXR0FLbUl6OTdQZTBMaUF0RzRTcDNITWxlWllVSEFoaW84a2xFMndHcmJwU0wyVVplRU8xYU1XZkpSZkFoZm9GNnNNVWVVWjFMcks4akJhNHpYR2xnTVBCMTY2ODI4OGJsK3FGRXVMaTBQQWh6anlvei9oNmR6VzMwY0NiNjhzQ0ZaaUhtS3VXY2xJa0RHT2FGbHByQXJ3cDU1L00wZmtrY0Fhc08vZTB1dDRjajRwcVVqeE52NlJUMXFBdmJaRGltSzhUTTJXeEFwMmVZZXd1Ykt6NlhZSG5mSG9ma29tSU5teVp4QTFpdGNmR0VsYy95dXhlTjdPNU9ueXBpRGd4Z0FHeE44RmpOM21CODB6MDRLUERUWDFGVnZsN3FmazNGS0NheHpRRFIrWUkxOEdLdFZ2US9Ud1FPTWVWWkQyMEhPb0JpV1BRQ0JtUG1QR05mL2VqWG1KTElaczdxb01FQUlnRGZETUNjVmZPODNOTmg4dG9KenZXQTR5SGR2ei9Qb3dYbzZWMU9HTmJZWkZKZzlBb1pOdXlMTVFXdW01bnhKS2JKRWk2RTB3bG9HejY0YmVoUFZLUU1rQkVPdTNYQ3FxU3ZhQkVBVGRzTlJHUXJEdjFuT0NNamhaQlNzWEJuWWptLzZYcjhia3FsbFBUTndjZGdmSkJTUUhnajY1SjV0NzQxenV6VE5vSDhJc0pQbE5yZW5kT1RTTTE3Sm4ydGs0UWVzUTJHZk9GQ3pnb0hpdFlKSlEwZjNVSDlhRlZ3Uks0YUZzSnR6TCtMNlpaVEdhcy83b2IzdjRGSkpCVzFoOUdWd2VQQWc2Z29ITGVMdnR6SE9hcHltYUtWbDdyb0pKWnFRRXJmNjFhNXdZQ3UxT3VIaWVmK1AvVmpVQUxvK1Q3QWRSRHFKNkdianJVa2IzR0VWakwzb3NienZrZGgyUGpBa3Rkem1OenQxZGdzL0crTTBQQkdqRDF0MEdOVENwLzgxc3ZQQnJ0M1RZM0dwUlhuSlgwZ3BJQStHRHZqelV4bEFxYXpzK2ZiaU4yUEZOVExkNWNVQ0FzdHR4USswZFdmRWZuMnRTYTBiS0JPV1RsbTNTZ2laa3o3V0dIWXhEY0U1cEw1ZTRtL0JtUnlhaFZtdnBGUWI4bUJtQXptWHF4TWp1cWg3TXFvUGx3S0REczlvMHR3VFBvZXg5UGQvckZtZG5ReTVBRmRMS0Q2RjlNcmN4a2c0dXZhWmVyS3pJSjk0ZUM3OEova214RXptSDdCVXpsR1drRzF4NlU5SytocW9wczh5bXRvenNQRXpGM3BLMHBaZFUyVEJJZysrc2hHZXRwSjJjMGxUUmVUOTZNZHR4VmVYcjFERUFHWHZ4bys0dmJwT1JYN01McjJVeUdoK3dOd0FxUklSMEFmTkNaOGlVZFJDaEJCQy5fdlI4Sl9HeTN1cDEzMnZ5ak1rM0Vma09YUkdJbjg3QzdoQ1pfUlJJakdONlgwV2oyU2NaREFuWUVkWlVfMTh3R2MwSy1nMWNvbHhuR180eDN0Q2p1dw=="><input type="hidden" name="_eventId" value="submit"><input type="hidden" name="geolocation">&ndash;&gt;<input class="btn btn-block btn-submit" name="submit" accesskey="l" tabindex="6" type="submit" value="登录"></form>-->
+
+                    <!--<div>-->
+                        <!--<br><span class="fa fa-question-circle"></span>-->
+                        <!--<span><a href="https://idpass.shmtu.edu.cn/pwd/forgetpwd">忘记密码</a></span>-->
+                        <!--<p></p></div>-->
+
+                    <!--<script type="text/javascript">-->
+                        <!--/*<![CDATA[*/-->
+                        <!--var i = "\u6B63\u5728\u767B\u5F55\u2026\u2026"-->
+                        <!--/*]]>*/-->
+                        <!--$(document).ready(function () {-->
+                            <!--$("#fm1").submit(function () {-->
+                                <!--$(":submit").attr("disabled", true);-->
+                                <!--$(":submit").attr("value", i);-->
+                                <!--return true;-->
+                            <!--});-->
+
+                            <!--$("#captchaImg").click(function(){-->
+                                <!--var id = Date.now();-->
+                                <!--var url = "/cas/captcha?" + id;-->
+                                <!--console.log(url);-->
+                                <!--$("#captchaImg").attr("src", url);-->
+                            <!--});-->
+                        <!--});-->
+                    <!--</script>-->
+
+                    <div id="sidebar">
+                        <div class="sidebar-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--
+        <div id="notices" class="col-md mt-3 mt-md-0"  th:if="${delegatedAuthenticationProviderDominant == null}">
+            <div th:replace="fragments/insecure :: insecure">
+                <a href="fragments/insecure.html">insecure alert goeshere</a>
+            </div>
+            <div th:replace="fragments/defaultauthn :: staticAuthentication">
+                <a href="fragments/defaultauthn.html">defaultAuthn</a>
+            </div>
+            <div th:replace="fragments/cookies :: cookiesDisabled">
+                <a href="fragments/cookies.html">cookies fragment</a>
+            </div>
+            <div th:replace="fragments/serviceui :: serviceUI">
+                <a href="fragments/serviceui.html">service ui fragment</a>
+            </div>
+            <div th:replace="fragments/cas-resources-list :: cas-resource-list">
+                <a href="fragments/cas-resources-list.html">cas-resource</a> list fragment
+            </div>
+        </div>
+        <div id="providers" class="col-md mt-3 mt-md-0">
+            <div th:replace="fragments/loginProviders :: loginProviders">
+                <a href="fragments/loginProviders.html">loginProviders</a>
+            </div>
+        </div> -->
+    </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+    <div class="container">
+            <span>Powered by Apereo CAS
+                <span>6.0.8</span>
+                技术支持：上海海事大学 信息化办公室 38284499
+            </span>
+    </div>
+</footer>
+
+<script type="text/javascript" src="../static/js/zxcvbn.js" th:src="@{~/js/zxcvbn.js}"></script>
+<script type="text/javascript" src="../static/js/jquery-ui.min.js" th:src="@{~/js/jquery-ui.min.js}"></script>
+<script type="text/javascript" src="../static/js/jquery.cookie.js" th:src="@{~/js/jquery.cookie.js}"></script>
+<script src="../static/js/bootstrap.bundle.min.js" th:src="@{~/js/bootstrap.bundle.min.js}"></script>
+
+<script src="../static/js/head.min.js" th:src="@{~/js/head.min.js}"></script>
+<script type="text/javascript" src="../static/js/cas.js" th:src="@{~/js/cas.js}"></script>
+
+<script>
+    head.ready(document, function () {
+        if (!window.jQuery) {
+            var jqueryUrl = "\/cas\/webjars\/jquery\/3.3.1-1\/jquery.min.js";
+            head.load(jqueryUrl, loadjQueryUI);
+        } else {
+            notifyResourcesAreLoaded(resourceLoadedSuccessfully);
+        }
+    });
+
+    function loadjQueryUI() {
+        var jqueryUrl = "\/cas\/webjars\/jquery-ui\/1.12.1\/jquery-ui.min.js";
+        head.load(jqueryUrl, loadjQueryCookies);
+    }
+
+    function loadjQueryCookies() {
+        var jqueryUrl = "\/cas\/webjars\/jquery-cookie\/1.4.1-1\/jquery.cookie.js";
+        head.load(jqueryUrl, notifyResourcesAreLoaded(resourceLoadedSuccessfully));
+    }
+
+    function notifyResourcesAreLoaded(callback) {
+        if (typeof callback === "function") {
+            callback();
+        }
+    }
+</script>
+
+<script>
+    /*<![CDATA[*/
+
+    var trackGeoLocation = false
+    "true";
+
+    var googleAnalyticsTrackingId = null;
+    /* // DISABLED BY WYP
+        if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != '') {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', googleAnalyticsTrackingId, 'auto');
+            ga('send', 'pageview');
+        }
+    */
+    /*]]>*/
+</script>
+
+
+
+</body></html>

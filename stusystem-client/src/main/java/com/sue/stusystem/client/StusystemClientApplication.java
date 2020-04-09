@@ -1,4 +1,4 @@
-package com.sue.stusystem.server;
+package com.sue.stusystem.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @ServletComponentScan
 @SpringBootApplication
-public class StusystemServerApplication {
+public class StusystemClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StusystemServerApplication.class, args);
+        SpringApplication.run(StusystemClientApplication.class, args);
     }
 
 }
