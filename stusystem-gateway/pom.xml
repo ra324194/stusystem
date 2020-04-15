@@ -9,7 +9,7 @@
         <!-- lookup parent from repository -->
     </parent>
 
-    <artifactId>stusystem-query</artifactId>
+    <artifactId>stusystem-gateway</artifactId>
 
 
 
@@ -20,24 +20,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+
         <!--<dependency>-->
         <!--<groupId>org.springframework.cloud</groupId>-->
         <!--<artifactId>spring-cloud-starter-openfeign</artifactId>-->
         <!--</dependency>-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
 
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-        </dependency>
 
 
         <dependency>
@@ -47,6 +36,10 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-nacos-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
 
         <!--<dependency>-->

@@ -1,17 +1,18 @@
-package com.sue.stusystem.query;
+package com.sue.stusystem.commonutil;
 
+
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableFeignClients(basePackages = "com.sue.stusystem.query.feign")
 @EnableDiscoveryClient
 @SpringBootApplication
-public class StusystemQueryApplication {
+@MapperScan(basePackages = "com.sue.stusystem.commonutil.mapper")
+public class CommonUtilApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StusystemQueryApplication.class, args);
+        SpringApplication.run(CommonUtilApplication.class, args);
     }
 
 }

@@ -1,17 +1,15 @@
-package com.sue.stusystem.query;
+package com.sue.stusystem.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableFeignClients(basePackages = "com.sue.stusystem.query.feign")
 @EnableDiscoveryClient
 @SpringBootApplication
-public class StusystemQueryApplication {
+public class StusystemGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StusystemQueryApplication.class, args);
+        SpringApplication.run(StusystemGatewayApplication.class, args);
     }
 
 }
