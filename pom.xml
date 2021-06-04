@@ -35,7 +35,7 @@
 
             <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
             <spring-cloud-alibaba.version>2.1.1.RELEASE</spring-cloud-alibaba.version>
-            <httplicent.version>4.5.10</httplicent.version>
+            <httplicent.version>4.5.13</httplicent.version>
             <jedis.version>3.1.0</jedis.version>
             <druid.version>1.1.21</druid.version>
             <mybatis-plus.version>3.3.0</mybatis-plus.version>
